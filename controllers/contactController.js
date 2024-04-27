@@ -11,7 +11,6 @@ const index = async (req, res) => {
   result.toArray().then((contacts) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(contacts);
-    console.log(contacts);
   });
 };
 
