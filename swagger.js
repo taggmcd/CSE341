@@ -11,7 +11,7 @@ const doc = {
     description: 'A RESTful API for your contacts.',
   },
   host: `cse341-vw3m.onrender.com`,
-  basePath: '/',
+  basePath: '/contacts',
   schemes: ['http', 'https'],
 };
 
