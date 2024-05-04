@@ -1,6 +1,7 @@
 const swaggerAutogen = require('swagger-autogen')();
 const outputFile = './swagger.json';
 const endpointsFiles = ['./routes/contacts.js'];
+const port = process.env.PORT || 3000;
 
 const doc = {
   info: {
@@ -8,7 +9,7 @@ const doc = {
     title: 'Contacts API',
     description: 'A RESTful API for your contacts.',
   },
-  host: 'localhost:3000',
+  host: `localhost:${port}`,
   basePath: '/',
   schemes: ['http', 'https'],
 };
