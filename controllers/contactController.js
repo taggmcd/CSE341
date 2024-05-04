@@ -4,6 +4,7 @@ const e = require('express');
 const ObjectId = require('mongodb').ObjectId;
 
 const index = async (req, res) => {
+  //#swagger.tags = ['Contacts']
   const result = await mongodb
     .getDatabase()
     .db()
@@ -17,6 +18,7 @@ const index = async (req, res) => {
 };
 
 const show = async (req, res) => {
+  //#swagger.tags = ['Contacts']
   const result = await mongodb
     .getDatabase()
     .db()
@@ -30,7 +32,7 @@ const show = async (req, res) => {
 };
 
 const create = async (req, res) => {
-  console.log(req.body);
+  //#swagger.tags = ['Contacts']
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -54,6 +56,7 @@ const create = async (req, res) => {
 };
 
 const update = async (req, res) => {
+  //#swagger.tags = ['Contacts']
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -77,6 +80,7 @@ const update = async (req, res) => {
 };
 
 const destroy = async (req, res) => {
+  //#swagger.tags = ['Contacts']
   const result = await mongodb
     .getDatabase()
     .db()
