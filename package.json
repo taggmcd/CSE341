@@ -11,11 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongo": "^0.1.0",
     "mongodb": "^6.5.0",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.2",

@@ -1,6 +1,9 @@
 // Express
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 // Database
 const mongodb = require('./database/mongodb.js');
