@@ -4,7 +4,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 const url = process.env.URL || 'localhost';
-const swaggerAutogen = require('./swagger');
 
 app.use(bodyParser.json());
 
