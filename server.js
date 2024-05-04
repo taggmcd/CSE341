@@ -3,12 +3,21 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
+const url = process.env.URL || 'localhost';
+const swaggerAutogen = require('./swagger');
 
 app.use(bodyParser.json());
 
 // Database
 const mongodb = require('./database/mongodb.js');
 
+// Set CORS headers
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
 // Routes
 app.use('/', require('./routes'));
 
@@ -20,6 +29,6 @@ mongodb.init((err) => {
   console.log('Connected to MongoDB');
 
   app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
+    console.log(`Server is running at http://${url}:${port}`);
   });
 });
