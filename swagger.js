@@ -10,7 +10,7 @@ const doc = {
     title: 'Contacts API',
     description: 'A RESTful API for your contacts.',
   },
-  host: `cse341-vw3m.onrender.com:${port}`,
+  host: `cse341-vw3m.onrender.com`,
   basePath: '/',
   schemes: ['http', 'https'],
 };
